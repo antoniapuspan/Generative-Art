@@ -49,8 +49,7 @@ const art6 = document.getElementById("artwork6");
 for(i=-20;i<45;i=i+5) {
     let circle = document.createElement("div");
     circle.classList.add("circle");
-    circle.style.transform = `translateX(${i}-50)`;
-    circle.style.transform = `rotate(${i}deg)`;
+    circle.style.transform = `translate(${i}-50) rotate(${i}*4deg)`;
     art6.appendChild(circle);
 }
 
@@ -60,8 +59,7 @@ for(i=0;i<200;i=i+10) {
     circle.classList.add("circle");
     circle.style.width = i + "px";
     circle.style.height = i + "px";
-    circle.style.transform = `translateX(${i})`;
-    circle.style.transform = `translateY(${i}/2)`;
+    circle.style.transform = `translate(${i}, -${i}/2)`;
     art7.appendChild(circle);
 }
 
@@ -71,7 +69,6 @@ for(i=50;i<200;i=i+10) {
     circle.classList.add("box");
     circle.style.width = i + "px";
     circle.style.height = i + "px";
-    circle.style.transform = `translateX(${i}/2)`;
     circle.style.transform = `rotate(${i}deg)`;
     art8.appendChild(circle);
 }
@@ -79,11 +76,13 @@ for(i=50;i<200;i=i+10) {
 const art9 = document.getElementById("artwork9");
 for(i=50;i<200;i=i+30) {
     let circle = document.createElement("div");
-    let box = document.createElement("div");
-    circle.classList.add("circle", "box");
+    circle.classList.add("circle");
     circle.style.width = i + "px";
     circle.style.height = i + "px";
+    art9.appendChild(circle);
+    let box = document.createElement("div");
+    box.classList.add("box");
     box.style.width = i + "px";
     box.style.height = i + "px";
-    art9.appendChild(circle);
+    art9.appendChild(box);
 }
