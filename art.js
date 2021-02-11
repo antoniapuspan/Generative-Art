@@ -62,6 +62,28 @@ for(i=0;i<200;i=i+10) {
     circle.style.height = i + "px";
     circle.style.transform = `translateX(${i})`;
     circle.style.transform = `translateY(${i}/2)`;
+    art7.appendChild(circle);
+}
 
-    art6.appendChild(circle);
+const art8 = document.getElementById("artwork8");
+for(i=50;i<200;i=i+10) {
+    let circle = document.createElement("div");
+    circle.classList.add("box");
+    circle.style.width = i + "px";
+    circle.style.height = i + "px";
+    circle.style.transform = `translateX(${i}/2)`;
+    circle.style.transform = `rotate(${i}deg)`;
+    art8.appendChild(circle);
+}
+
+const art9 = document.getElementById("artwork9");
+for(i=50;i<200;i=i+30) {
+    let circle = document.createElement("div");
+    let box = document.createElement("div");
+    circle.classList.add("circle", "box");
+    circle.style.width = i + "px";
+    circle.style.height = i + "px";
+    box.style.width = i + "px";
+    box.style.height = i + "px";
+    art9.appendChild(circle);
 }
