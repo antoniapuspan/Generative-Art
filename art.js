@@ -35,3 +35,33 @@ for(i=-90;i<90;i=i+20) {
     box.style.transform = "translate(" + i + "px, " + i + "px)";
     art4.appendChild(box);
 }
+
+const art5 = document.getElementById("artwork5");
+for(i=1;i<512;i=i*2) {
+    let circle = document.createElement("div");
+    circle.classList.add("circle");
+    circle.style.width = i + "px";
+    circle.style.height = i + "px";
+    art5.appendChild(circle);
+}
+
+const art6 = document.getElementById("artwork6");
+for(i=-20;i<45;i=i+5) {
+    let circle = document.createElement("div");
+    circle.classList.add("circle");
+    circle.style.transform = `translateX(${i}-50)`;
+    circle.style.transform = `rotate(${i}deg)`;
+    art6.appendChild(circle);
+}
+
+const art7 = document.getElementById("artwork7");
+for(i=0;i<200;i=i+10) {
+    let circle = document.createElement("div");
+    circle.classList.add("circle");
+    circle.style.width = i + "px";
+    circle.style.height = i + "px";
+    circle.style.transform = `translateX(${i})`;
+    circle.style.transform = `translateY(${i}/2)`;
+
+    art6.appendChild(circle);
+}
